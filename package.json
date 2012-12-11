@@ -8,5 +8,8 @@
 	},
 	"optionalMappings": {
 		"node-webkit-bin-darwin": ["archive", "http://s3.amazonaws.com/node-webkit/node-webkit-latest-osx-ia32.zip"]
+	},
+	"scripts": {
+		"workspace": "node ./workspace.js"
 	}
 }
