@@ -1,0 +1,12 @@
+{
+	"name": "freedom-platform-app-node-webkit",
+	"version": "0.1.0",
+	"pm": "sm",
+	"mappings": {
+		"sm": "github.com/sourcemint/sm/~0.1.0",
+		"node-webkit-src": "github.com/rogerwang/node-webkit/~0.3.5"
+	},
+	"optionalMappings": {
+		"node-webkit-bin-darwin": ["archive", "http://s3.amazonaws.com/node-webkit/node-webkit-latest-osx-ia32.zip"]
+	}
+}
