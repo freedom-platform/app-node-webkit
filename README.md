@@ -15,4 +15,4 @@ Status: BETA
 Usage
 -----
 
-	sm clone -s https://github.com/freedom-platform/app-node-webkit ./app
+	sm try https://github.com/freedom-platform/app-node-webkit
