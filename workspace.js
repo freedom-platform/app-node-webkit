@@ -1,20 +1,12 @@
 
 const PATH = require("path");
 const FS = require("fs");
-const SM = require("sm");
-const PM = SM.for(__dirname);
+const INSTALL = require("./install");
 
 
 exports.main = function(callback) {
 
-	var uri = false;
-	if (process.platform === "darwin") {
-		uri = "node-webkit-bin-" + process.platform + "/node-webkit.app/Contents/MacOS/node-webkit";
-	} else {
-		return callback(new Error("Platform `" + process.platform + "` not supported!"));
-	}
-
-	PM.resolve(uri, function(err, binPath) {
+	return INSTALL.getBinPath(process.platform, function (err, binPath) {
 		if (err) return callback(err);
 
 		console.log("\nLaunch examples:\n");
@@ -48,8 +40,8 @@ if (require.main === module) {
 	exports.main(function(err) {
 		if (err) {
 			console.error(err.stack);
-			process.exit(1);
+			return process.exit(1);
 		}
-		process.exit(0);
-	})
+		return process.exit(0);
+	});
 }
