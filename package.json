@@ -1,9 +1,18 @@
 {
+	"extends": [
+		"dev", "TODO: Merge this descriptor on top of package.prototype.json from referenced package."
+	],
 	"name": "freedom-platform-app-node-webkit",
 	"version": "0.1.0",
 	"pm": "sm",
+	"dependencies": {
+		"fs-extra": "~0.3.2"
+	},
 	"mappings": {
 		"sm": "github.com/sourcemint/sm/~0.1.0",
+		"dev": "github.com/freedom-platform/dev/~0.1.0"
+	},
+	"devMappings": {
 		"node-webkit-src": "github.com/rogerwang/node-webkit/~0.3.5"
 	},
 	"optionalMappings": {
@@ -11,6 +20,7 @@
 	},
 	"scripts": {
 		"install": "node install.js",
-		"workspace": "node ./workspace.js"
+		"start-workspace": "node ./node_modules/dev/workspace.js --start",
+		"stop-workspace": "node ./node_modules/dev/workspace.js --stop"
 	}
 }

@@ -1,5 +1,9 @@
 {
     "name": "freedom-platform-app-node-webkit-examples-HelloWorld",
+    "version": "0.1.0",
+    "mappings": {
+		"app-node-webkit": "github.com/freedom-platform/app-node-webkit/~0.1.0"
+    },
     "main": "index.html",
     "window": {
         "title": "Hello World",
@@ -9,5 +13,8 @@
         "height": 400,
         "resizable": false,
         "show": true
+    },
+    "scripts": {
+    	"run": "./node_modules/app-node-webkit/bin/nw ."
     }
-}
+ }

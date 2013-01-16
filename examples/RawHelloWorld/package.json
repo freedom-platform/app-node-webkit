@@ -1,0 +1,13 @@
+{
+    "name": "freedom-platform-app-node-webkit-examples-RawHelloWorld",
+    "main": "index.html",
+    "window": {
+        "title": "Hello World",
+        "toolbar": false,
+        "position": "center",
+        "width": 400,
+        "height": 400,
+        "resizable": false,
+        "show": true
+    }
+}

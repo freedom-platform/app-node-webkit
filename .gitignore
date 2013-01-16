@@ -1,2 +1,4 @@
 .sourcemint/
 /node_modules/
+/examples/*/node_modules/
+/bin/nw
