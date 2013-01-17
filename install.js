@@ -40,7 +40,8 @@ exports.main = function(callback) {
 			// WORKAROUND: Create wrapper script instead of symlink.
 			FS.writeFileSync(binAliasPath, [
 				"#!/bin/bash",
-				binPath + " $@"
+				"BASE_PATH=$(dirname $0)",
+				"$BASE_PATH/.." + binPath.substring(__dirname.length) + " $@"
 			].join("\n"));
 			FS.chmodSync(binAliasPath, 0755);
 			return callback(null);
