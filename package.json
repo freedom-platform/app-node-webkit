@@ -1,26 +1,30 @@
 {
-	"extends": [
-		"dev", "TODO: Merge this descriptor on top of package.prototype.json from referenced package."
-	],
-	"name": "freedom-platform-app-node-webkit",
-	"version": "0.1.0",
-	"pm": "sm",
-	"dependencies": {
-		"fs-extra": "~0.3.2"
-	},
-	"mappings": {
-		"sm": "github.com/sourcemint/sm/~0.1.0",
-		"dev": "github.com/freedom-platform/dev/~0.1.0"
-	},
-	"devMappings": {
-		"node-webkit-src": "github.com/rogerwang/node-webkit/~0.3.5"
-	},
-	"optionalMappings": {
-		"node-webkit-bin-darwin": ["archive", "http://s3.amazonaws.com/node-webkit/node-webkit-latest-osx-ia32.zip"]
-	},
-	"scripts": {
-		"install": "node install.js",
-		"start-workspace": "node ./.sm/bin/dev-workspace.js --start",
-		"stop-workspace": "node ./.sm/bin/dev-workspace.js --stop"
-	}
+    "extends": [
+        "dev",
+        "TODO: Merge this descriptor on top of package.prototype.json from referenced package."
+    ],
+    "name": "freedom-platform-app-node-webkit",
+    "version": "0.1.1",
+    "pm": "sm",
+    "dependencies": {
+        "fs-extra": "~0.3.2"
+    },
+    "mappings": {
+        "sm": "github.com/sourcemint/sm/~0.1.0",
+        "dev": "github.com/freedom-platform/dev/~0.1.0"
+    },
+    "devMappings": {
+        "node-webkit-src": "github.com/rogerwang/node-webkit/~0.3.5"
+    },
+    "optionalMappings": {
+        "node-webkit-bin-darwin": [
+            "archive",
+            "http://s3.amazonaws.com/node-webkit/node-webkit-latest-osx-ia32.zip"
+        ]
+    },
+    "scripts": {
+        "install": "node install.js",
+        "start-workspace": "node ./.sm/bin/dev-workspace.js --start",
+        "stop-workspace": "node ./.sm/bin/dev-workspace.js --stop"
+    }
 }
