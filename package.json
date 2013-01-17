@@ -20,7 +20,7 @@
 	},
 	"scripts": {
 		"install": "node install.js",
-		"start-workspace": "node ./node_modules/dev/workspace.js --start",
-		"stop-workspace": "node ./node_modules/dev/workspace.js --stop"
+		"start-workspace": "node ./.sm/bin/dev-workspace.js --start",
+		"stop-workspace": "node ./.sm/bin/dev-workspace.js --stop"
 	}
 }
