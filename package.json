@@ -4,7 +4,7 @@
         "TODO: Merge this descriptor on top of package.prototype.json from referenced package."
     ],
     "name": "freedom-platform-app-node-webkit",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "pm": "sm",
     "dependencies": {
         "fs-extra": "~0.3.2"
