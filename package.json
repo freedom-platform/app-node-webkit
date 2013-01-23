@@ -10,7 +10,6 @@
         "fs-extra": "~0.3.2"
     },
     "mappings": {
-        "sm": "github.com/sourcemint/sm/~0.1.0",
         "dev": "github.com/freedom-platform/dev/~0.1.0"
     },
     "devMappings": {
