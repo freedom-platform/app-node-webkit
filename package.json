@@ -3,7 +3,7 @@
         "dev"
     ],
     "name": "freedom-platform-app-node-webkit",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "pm": "sm",
     "bin": {
         "nw": "./bin/nw"
