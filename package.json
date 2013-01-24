@@ -1,18 +1,18 @@
 {
     "extends": [
-        "dev",
-        "TODO: Merge this descriptor on top of package.prototype.json from referenced package."
+        "dev"
     ],
     "name": "freedom-platform-app-node-webkit",
     "version": "0.1.3",
     "pm": "sm",
+    "bin": {
+        "nw": "./bin/nw"
+    },
     "dependencies": {
         "fs-extra": "~0.3.2"
     },
-    "mappings": {
-        "dev": "github.com/freedom-platform/dev/~0.1.0"
-    },
     "devMappings": {
+        "dev": "github.com/freedom-platform/dev/~0.1.0",
         "node-webkit-src": "github.com/rogerwang/node-webkit/~0.3.5"
     },
     "optionalMappings": {
@@ -22,8 +22,6 @@
         ]
     },
     "scripts": {
-        "install": "node install.js",
-        "start-workspace": "node ./.sm/bin/dev-workspace.js --start",
-        "stop-workspace": "node ./.sm/bin/dev-workspace.js --stop"
+        "install": "node install.js"
     }
 }

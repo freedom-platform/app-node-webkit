@@ -54,11 +54,17 @@ exports.main = function(callback) {
 			FS.readdirSync(PATH.join(__dirname, "examples")).forEach(function(example) {
 				var path = PATH.join(__dirname, "examples", example, "package.json");
 				var descriptor = JSON.parse(FS.readFileSync(path));
+				// TODO: Run `sm install --dir examples/*` with flag to indicate that `app-node-webkit` should be linked.
 				if (descriptor && descriptor.mappings && descriptor.mappings["app-node-webkit"]) {
 					path = PATH.join(__dirname, "examples", example, "node_modules");
 					if (!FS.existsSync(path)) FS.mkdirSync(path);
 					path = PATH.join(__dirname, "examples", example, "node_modules", "app-node-webkit");
 					if (!FS.existsSync(path)) FS.symlinkSync("../../..", path);
+					path = PATH.join(__dirname, "examples", example, ".sm", "bin", "nw");
+					if (!FS.existsSync(path)) {
+						if (!FS.existsSync(PATH.dirname(path))) FS.mkdirsSync(PATH.dirname(path));
+						FS.symlinkSync(PATH.join("../..", "node_modules", "app-node-webkit", "bin", "nw"), path);
+					}
 				}
 			});
 			return callback(null);

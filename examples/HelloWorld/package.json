@@ -15,6 +15,6 @@
         "show": true
     },
     "scripts": {
-    	"run": "./node_modules/app-node-webkit/bin/nw ."
+    	"run": "./.sm/bin/nw ."
     }
  }
