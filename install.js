@@ -1,6 +1,7 @@
 
 const PATH = require("path");
 const FS = require("fs-extra");
+const EXEC = require("child_process").exec;
 const SM = require("sm");
 const PM = SM.for(__dirname);
 
@@ -85,10 +86,37 @@ exports.main = function(callback) {
 		}
 	}
 
+	function installDevcomp(callback) {
+		// TODO: Refactor this into sm helpers lib.
+		try {
+			if (!PATH.existsSync(PATH.join(__dirname, "devcomp"))) {
+				return callback(null);
+			}
+
+			EXEC("sm install", {
+				cwd: PATH.join(__dirname, "devcomp")
+			}, function(error, stdout, stderr) {
+				// TODO: See why `sm *` writes `\[0m` to stderr.
+			    if (error || (stderr && !(stderr.length === 4 && stderr.charAt(1) === "["))) {
+			    	TERM.stderr.writenl("\0red(" + stderr + "\0)");
+			        return callback(new Error("Error running os command: " + command));
+			    }
+			    return callback(null);
+			});
+
+		} catch(err) {
+			return callback(err);
+		}		
+	}
+
 	return installPlatformSpecificDependencies(function(err) {
 		if (err) return callback(err);
 
-		return linkMappingsForExamples(callback);
+		return linkMappingsForExamples(function(err) {
+			if (err) return callback(err);
+
+			return installDevcomp(callback);
+		});
 	});
 }
 
