@@ -93,6 +93,7 @@ exports.main = function(callback) {
 				return callback(null);
 			}
 
+			// TODO: Use spawn and log progress via helper.
 			EXEC("sm install", {
 				cwd: PATH.join(__dirname, "devcomp")
 			}, function(error, stdout, stderr) {
