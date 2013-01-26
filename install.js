@@ -60,6 +60,9 @@ exports.main = function(callback) {
 	function linkMappingsForExamples(callback) {
 		// TODO: Refactor this into sm helpers lib.
 		try {
+			if (!PATH.existsSync(PATH.join(__dirname, "examples"))) {
+				return callback(null);
+			}
 			FS.readdirSync(PATH.join(__dirname, "examples")).forEach(function(example) {
 				var path = PATH.join(__dirname, "examples", example, "package.json");
 				var descriptor = JSON.parse(FS.readFileSync(path));
