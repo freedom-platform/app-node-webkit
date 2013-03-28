@@ -19,7 +19,8 @@
         "node-webkit-bin-darwin": [
             "archive",
             "https://s3.amazonaws.com/node-webkit/v0.3.7/node-webkit-v0.3.7-osx-ia32.zip"
-        ]
+        ],
+        "ejb": ["npm", "ejdb@~1.0.57"]
     },
     "scripts": {
         "install": "node install.js"

@@ -18,3 +18,8 @@ Usage
 You need the [sm](http://sourcemint.org/#install) package manager installed. Then run:
 
 	sm try github.com/freedom-platform/app-node-webkit
+
+Links
+-----
+
+  * http://paulirish.com/2013/webkit-for-developers/
