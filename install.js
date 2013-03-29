@@ -2,18 +2,17 @@
 const PATH = require("path");
 const FS = require("fs-extra");
 const EXEC = require("child_process").exec;
-const SM = require("sm");
-const PM = SM.for(__dirname);
+const PINF = require("pinf").for(module);
 
 
 exports.getBinPath = function(platform, callback) {
 	var uri = false;
 	if (process.platform === "darwin") {
-		uri = "node-webkit-bin-" + process.platform + "/node-webkit.app/Contents/MacOS/node-webkit";
+		uri = "node-webkit-bin-" + process.platform + "/Contents/MacOS/node-webkit";
 	} else {
 		return callback(new Error("Platform `" + process.platform + "` not supported!"));
 	}
-	PM.resolve(uri, function(err, binPath) {
+	return PINF.resolve(uri, function(err, binPath) {
 		if (err) return callback(err);
 		return callback(null, binPath);
 	}).fail(callback);
