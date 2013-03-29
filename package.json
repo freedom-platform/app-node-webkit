@@ -3,7 +3,7 @@
         "dev"
     ],
     "name": "freedom-platform-app-node-webkit",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "pm": "sm",
     "bin": {
         "nw": "./bin/nw"
@@ -21,7 +21,10 @@
             "archive",
             "https://s3.amazonaws.com/node-webkit/v0.3.7/node-webkit-v0.3.7-osx-ia32.zip"
         ],
-        "ejb": ["npm", "ejdb@~1.0.57"]
+        "ejb": [
+            "npm",
+            "ejdb@~1.0.57"
+        ]
     },
     "scripts": {
         "install": "node install.js"
