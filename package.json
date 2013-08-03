@@ -1,7 +1,4 @@
 {
-    "extends": [
-        "dev"
-    ],
     "name": "freedom-platform-app-node-webkit",
     "version": "0.1.7",
     "pm": "sm",
@@ -13,7 +10,6 @@
         "pinf": "~0.2.17"
     },
     "devMappings": {
-        "dev": "github.com/freedom-platform/dev/~0.1.0",
         "node-webkit-src": "github.com/rogerwang/node-webkit/~0.3.5"
     },
     "optionalMappings": {
