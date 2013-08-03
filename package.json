@@ -1,6 +1,6 @@
 {
     "name": "freedom-platform-app-node-webkit",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "pm": "sm",
     "bin": {
         "nw": "./bin/nw"
