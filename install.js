@@ -115,7 +115,9 @@ exports.main = function(callback) {
 		return linkMappingsForExamples(function(err) {
 			if (err) return callback(err);
 
-			return installDevcomp(callback);
+			//return installDevcomp(callback);
+
+			return callback(null);
 		});
 	});
 }
